@@ -2,9 +2,9 @@ layout: {zmk_keyboard: sofle}
 layers:
   default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', Esc, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', ↹, A, S, D, F, G, H, J, K,
     L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', MUTE, '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-option$$',
-    '$$mdi:apple-keyboard-control$$', lower, ⏎, ␣, raise, '$$mdi:apple-keyboard-control$$', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', ENTER,
+    '$$mdi:apple-keyboard-control$$', low, ⏎, ␣, rai, '$$mdi:apple-keyboard-control$$', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', ENTER,
     →, ↑, ←, ↓]
-  lower:
+  low:
   - '&studio_unlock'
   - F1
   - F2
@@ -69,7 +69,7 @@ layers:
   - C
   - D
   - E
-  raise:
+  rai:
   - BT CLR
   - BT 1
   - BT 2
@@ -134,7 +134,7 @@ layers:
   - C
   - D
   - E
-  adjust:
+  adj:
   - BT CLR
   - BT 1
   - BT 2
