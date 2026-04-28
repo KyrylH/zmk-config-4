@@ -22,9 +22,10 @@
 / {
     
     behaviors {
-        mouse_scroll: mouse_scroll {
+        enc_scroll: enc_scroll {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
+
             bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
         };
     };
@@ -58,7 +59,7 @@
                    &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp RET       &kp SPACE          &mo 2   &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &enc_scroll>;
         };
 
         lower_layer {
@@ -78,7 +79,7 @@
                       &trans     &trans       &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &enc_scroll>;
         };
 
         raise_layer {
@@ -98,7 +99,7 @@
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &enc_scroll>;
         };
 
         adjust_layer {
@@ -118,7 +119,7 @@
     &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &enc_scroll>;
         };
     };
 };
