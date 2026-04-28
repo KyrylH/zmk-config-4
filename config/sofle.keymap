@@ -25,8 +25,7 @@
         mouse_scroll: mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>;
+            bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
         };
     };
     // Activate ADJUST layer by pressing raise and lower simultaneously
@@ -59,7 +58,7 @@
                    &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp RET       &kp SPACE          &mo 2   &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
         };
 
         lower_layer {
@@ -79,7 +78,7 @@
                       &trans     &trans       &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
         };
 
         raise_layer {
@@ -99,7 +98,7 @@
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
         };
 
         adjust_layer {
@@ -119,7 +118,7 @@
     &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &mouse_scroll>;
         };
     };
 };
