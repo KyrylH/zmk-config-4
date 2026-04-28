@@ -23,13 +23,14 @@
 #define ADJUST 3
 
 / {
-    // Activate ADJUST layer by pressing raise and lower simultaneously
+    
     behaviors {
         mouse_scroll: mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate";
             sensor-binding-cells = <0>;
         };
     };
+    // Activate ADJUST layer by pressing raise and lower simultaneously
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
