@@ -23,7 +23,7 @@
     
     behaviors {
         enc_scroll: enc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-input-two-axis";
             #sensor-binding-cells = <0>;
 
             bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
