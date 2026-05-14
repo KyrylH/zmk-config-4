@@ -11,10 +11,11 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
-#define BASE 0
-#define LOWER 1
-#define RAISE 2
+#define BASE   0
+#define LOWER  1
+#define RAISE  2
 #define ADJUST 3
+#define TOG1   4
 
 / {
     // Activate ADJUST layer by pressing raise and lower simultaneously
@@ -105,6 +106,25 @@
 &trans             &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans           &trans           &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans             &trans           &trans           &trans           &trans           &trans           &trans           &trans                  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PAGE_UP PAGE_DOWN>;
+        };
+tog_1 {
+            display-name = "TOG1";
+            // ------------------------------------------------------------------------------------------------------------
+            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
+            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |       |      |       |       |
+            // |     | ALT  | CTRL | SHIFT |       | CAPS |                |  <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
+            // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+            //              |      |       |       |      |      |  |      |      |      |       |      |
+
+            bindings = <
+&trans      &trans       &trans     &trans     &trans        &trans                       &trans     &trans    &trans  &trans     &trans   &trans
+&trans      &trans       &trans     &trans     &trans        &trans                       &trans     &trans    &trans  &trans     &trans   &trans
+&trans      &trans       &trans     &trans     &trans        &trans                       &trans     &trans    &trans  &trans     &trans   &trans
+&trans      &trans       &trans     &trans     &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans     &trans   &trans
+                    &trans        &trans        &trans        &trans        &trans     &trans     &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PAGE_UP PAGE_DOWN>;
